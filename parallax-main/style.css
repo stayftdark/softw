@@ -1,11 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght300display=swap") * {
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+:root {
+  --primary-color: #a5978b;
+  --secondary-color: #000000;
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Kode Mono", sans-serif;
   color: #333;
   line-height: 1.6;
 }
@@ -17,13 +23,14 @@ ul {
 a {
   text-decoration: none;
   color: #333;
+  margin: 10px;
 }
 
 h1,
 h2 {
   font-weight: 300;
   line-height: 1.2;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 p {
@@ -33,12 +40,74 @@ p {
 img {
   width: 100%;
 }
-
+/* navbar styling */
 .navbar {
-  background-color: #a5978b;
-  color: #8a817c;
+  background-color: var(--primary-color);
+  /* logo color */
+  color: #312c27;
   height: 70px;
 }
+.navbar .flex {
+  justify-content: space-between;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar a {
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+.navbar a:hover {
+  border-bottom: 2px #fff solid;
+}
+
+/* Showcase */
+.showcase {
+  background-color: var(--primary-color);
+  height: 400px;
+  color: white;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 10px;
+}
+
+.showcase .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.showcase-form {
+  position: relative;
+  width: 400px;
+  top: 60px;
+  padding: 40px;
+  /* always in the front */
+  z-index: 100;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+/* changes the formatting of the input  */
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  font-size: 16px;
+}
+/* removes border when you click on input  */
+.showcase-form input:focus {
+  outline: none;
+}
+/* utilities styling (classes used all around the website) */
 /* to center the page so that it doesnt extend over a certain point */
 .container {
   max-width: 1100px;
@@ -46,4 +115,49 @@ img {
   margin: 0 auto;
   /* to account for the space on top of the nav bar */
   overflow: auto;
+  padding: 0 40px;
+}
+/* white card surrounding input */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+/* button with an outline */
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 10px 20px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+.flex {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
