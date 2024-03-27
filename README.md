@@ -1,5 +1,5 @@
 **About**
-My project is a website that attemtps to mock a website that is meant for professional use. After getting the hang of the basics of coding, creating a website for a functional purpose appeared to be the best way to get the hang of web development. 
+My project is mocksite that attemtps to mock a professional website. After getting the hang of the basics of coding, creating a website for functional use appeared to be the best way to get the hang of web development. 
 
 **Goal and requirements**
 My goal is to meet the expected results by the due date. Time management has always been a struggle for me and getting pratice in completing a task will most likely help. (https://github.com/stayftdark/softw)
