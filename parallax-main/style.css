@@ -2,7 +2,9 @@
 
 :root {
   --primary-color: #a5978b;
-  --secondary-color: #000000;
+  --secondary-color: #a59;
+  --dark-color: rgb(85, 7, 80);
+  --light-color: #f4f4f4;
 }
 * {
   margin: 0;
@@ -141,4 +143,37 @@ img {
 .stats .grid p {
   font-size: 20px;
   font-weight: bold;
+}
+
+/* cli */
+.cli .grid{
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.cli .grid > *:first-child{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  /* spans two columns and two rows, pushing the other children to the side */
+}
+
+/* cloud */
+.cloud .grid {
+  grid-template-columns: 4fr 3fr;
+}
+
+/* languages */
+.languages .flex{
+  flex-wrap: wrap;
+}
+.languages .card{
+  text-align: center;
+  margin: 18px 10x 40px;
+  transition: transform 0.2s ease-in;
+}
+.languages .card h4{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.languages .card:hover{
+  transform: translateY(-15px);
 }
