@@ -30,7 +30,7 @@ h1,
 h2 {
   font-weight: 300;
   line-height: 1.2;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 p {
@@ -107,57 +107,25 @@ img {
 .showcase-form input:focus {
   outline: none;
 }
-/* utilities styling (classes used all around the website) */
-/* to center the page so that it doesnt extend over a certain point */
-.container {
-  max-width: 1100px;
-  /* 0 top and bottom, auto left and right */
-  margin: 0 auto;
-  /* to account for the space on top of the nav bar */
-  overflow: auto;
-  padding: 0 40px;
-}
-/* white card surrounding input */
-.card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 10px;
-  color: #333;
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: white;
+
+  /* slant */
+  transform: SkewY(-3deg);
+  /* to accomodate for other browsers*/
+  -webkit-transform: SkewY(-3deg); /* chrome and safari */
+  -moz-transform: SkewY(-3deg); /* firefox */
+  -ms-transform: SkewY(-3deg); /* internet explorer and microsoft */
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 30px;
-  cursor: pointer;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 8px;
-}
-/* button with an outline */
-.btn-outline {
-  background-color: transparent;
-  border: 1px solid white;
-  padding: 10px 20px;
-}
-
-.btn:hover {
-  transform: scale(0.98);
-}
-.flex {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+/* Stats */
+.stats {
+  padding-top: 100px;
 }
