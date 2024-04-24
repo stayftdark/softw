@@ -48,6 +48,10 @@ img {
   color: #312c27;
   height: 70px;
 }
+.navbar,
+.container-flex{
+  border: blue solid;;
+}
 .navbar .flex {
   justify-content: space-between;
 }
@@ -70,6 +74,9 @@ img {
   color: white;
   position: relative;
 }
+.showcase,
+.container-grid{
+  border: blue solid;
 
 .showcase h1 {
   font-size: 40px;
@@ -177,16 +184,29 @@ img {
 .languages .card:hover{
   transform: translateY(-15px);
 }
+
 /* features */
+.features-head,
+ .container-grid{
+  border: blue solid;
+  position: relative;
+  width: 100%;
+
+}
+
 .features-head img,
 .docs-head img{
   width: 200px;
   justify-self: flex-end;
+  border: red solid;
+  z-index: 100;
+
 }
 
 .features-sub-head img{
   width: 300px;
   justify-self: flex-end;
+  border: red solid;
 }
 .features-main .card> i{
   margin-right: 20px;
@@ -239,6 +259,7 @@ img {
     grid-template-rows: 1fr;
 }
 
+}
 .showcase{
   height: auto;
 }
