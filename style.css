@@ -48,10 +48,7 @@ img {
   color: #312c27;
   height: 70px;
 }
-.navbar,
-.container-flex{
-  border: blue solid;;
-}
+
 .navbar .flex {
   justify-content: space-between;
 }
@@ -74,9 +71,6 @@ img {
   color: white;
   position: relative;
 }
-.showcase,
-.container-grid{
-  border: blue solid;
 
 .showcase h1 {
   font-size: 40px;
